@@ -1,0 +1,90 @@
+.page {
+  padding: 32px;
+  flex: 1;
+  min-width: 0;
+
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 auto 16px auto;
+    width: fit-content;
+  }
+
+  .description {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .searchField {
+    margin: 32px auto 0;
+    width: min(400px, 100%);
+    border-bottom: 1px solid var(--primary-color);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    input {
+      all: unset;
+      box-sizing: border-box;
+      flex: 1;
+      min-width: 0;
+      padding: 8px 0;
+      font-size: 24px;
+      font-family: "Playfair Display", serif;
+    }
+
+    button {
+      all: unset;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid var(--secondary-color);
+        outline-offset: 2px;
+      }
+    }
+
+    .clearButton {
+      font-size: 12px;
+      color: var(--text-color-light);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .currentSearch {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-color-light);
+  }
+}
+
+.catalogue {
+  margin-top: 48px;
+
+  .message,
+  .count {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--text-color-light);
+  }
+
+  .bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    gap: 32px;
+    margin-top: 24px;
+    list-style: none;
+
+    >li {
+      min-width: 0;
+    }
+  }
+}
